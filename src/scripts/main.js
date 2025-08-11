@@ -1,6 +1,6 @@
 'use strict';
 
-const formNew = document.querySelectorAll('input');
+const formNew = document.querySelectorAll('form input');
 
 for (const key of formNew) {
   const id = key.getAttribute('id');
@@ -9,6 +9,7 @@ for (const key of formNew) {
 
   label.classList.add('field-label');
   label.setAttribute('for', id);
+  label.textContent = nameThis;
   label.textContent = nameThis[0].toUpperCase() + nameThis.slice(1);
   key.setAttribute('placeholder', label.textContent);
   key.parentNode.insertBefore(label, key);
