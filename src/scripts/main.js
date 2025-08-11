@@ -10,7 +10,10 @@ for (const key of formNew) {
   label.classList.add('field-label');
   label.setAttribute('for', id);
   label.textContent = nameThis;
-  label.textContent = nameThis[0].toUpperCase() + nameThis.slice(1);
-  key.setAttribute('placeholder', label.textContent);
+
+  key.setAttribute(
+    'placeholder',
+    nameThis[0].toUpperCase() + nameThis.slice(1),
+  );
   key.parentNode.insertBefore(label, key);
 }
